@@ -1,0 +1,596 @@
+Exercício 2 - Faça um algoritmo para ler e exibir uma palavra.
+
+Inicio Algoritmo
+		Declarar variavel do tipo texto: palavraDigitada;
+		palavraDigitada = Ler (“Hello World!”);
+		Exibir: ”O usuario digitou: “ + palavraDigitada;
+
+	Console: O usuário digitou: Hello World!
+
+Fim Algoritmo
+ 
+==============
+
+Exercício 3 - Faça um algoritmo para ler dois valores, armazenar em variáveis, e exibir os valores das variáveis, trocados. 
+
+Inicio Algoritmo
+Declarar variáveis do tipo texto: nomeUm, nomeDois;
+
+	nomeUm = Ler digitação (“Flavio”);
+ 	nomeDois = Ler digitação (“Emerson”);
+
+Exibir: “Primeiro valor digitado:” + nomeDois;
+Exibir: “Segundo valor digitado:” + nomeUm;
+
+Console: Emerson.
+Console: Flavio.
+
+Fim Algoritmo
+
+===============
+
+Exercício 4 -  Faça um algoritmo para ler um número inteiro, armazenar em uma variável, calcular o dobro, e exibir. 
+
+Inicio Algoritmo
+	Declarar variável do tipo numérica: num1;
+	num1 = Ler digitação (4);
+	
+	num1 = (4) * 2;
+
+	Exibir: “O Dobro do valor é:“ + num1;
+
+	Console: O Dobro do valor é: 8
+
+Fim Algoritmo
+
+===============
+
+
+Exercício 5 -  Faça um algoritmo para ler três  números inteiros, armazenar em variáveis, e exibir a soma, a subtração, multiplicação e a média dos três números digitados.  
+
+Inicio Algoritmo
+
+	Declarar variáveis do tipo numérica: num1, num2, num3, resultado1, resultado2, resultado3, resultado4;
+
+	num1 = Ler digitação (10);
+	num2 = Ler digitação (20);
+	num3 = Ler digitação (30);
+
+	resultado1 = (num1 + num2 + num3);
+	resultado2 = (num3 - num2 – num1);
+	resultado3 = (num1 * num2) * num3;
+	resultado4 = (num1 + num2 + num3) / 3;
+
+	Exibir: “A soma dos valores é igual a:” + resultado1;
+	Exibir: “A subtração dos valores é igual a:” + resultado2;
+	Exibir: “A multiplicação dos valores é igual a:” + resultado3;
+	Exibir: “A média dos valores é igual a:” + resultado4;
+
+	Console :   A soma dos valores é igual a: 60
+                                A subtração dos valores é igual a: 0
+		      A multiplicação dos valores é igual a: 6000
+	                   A média dos valores é igual a: 20
+
+Fim Algoritmo
+
+================
+ 
+Exercício 6 -  Faça um algoritmo para ler duas notas, calcular a média. E SE - a média > 5 Exibir aprovado,  SE a média < 5 exibir reprovado, se media = 5 exibir exame. 
+	Inicio Algoritmo
+			Declarar variáveis do tipo numérica: nota1, nota2, media;
+			nota1 = Ler digitação (7);
+		nota2 = Ler digitação (7);
+			media = (nota1 + nota2) / 2;
+			SE
+		      media > 5;
+		      Exibir: “Aprovado, nota:” + media;
+		FIM SE
+			SE
+		     media < 5;
+		     Exibir: “Reprovado, nota:” + media;
+		FIM SE
+
+		SE NÃO
+		    media == 5;
+		    Exibir: Exame, nota:” + media;
+		FIM SE 
+		
+			Console: “Aprovado, nota: 7”
+Fim Algoritmo
+
+===============
+
+Exercício 7 -  Faça um algoritmo para ler um valor de salário, calcular e exibir o valor do INSS a ser pago. Respeitando a tabela abaixo: 
+	Salário de Contribuição (R$)	Alíquota
+	Até R$ 1.045,00	7,50%
+	De R$ 1.045,01 a R$ 2.089,60	9%
+De R$ 2.089,61 até R$ 
+12%
+3.134,40
+De R$ 3.134,41 até R$ 
+14%
+6.101,06
+Inicio Algoritmo
+	
+	Declarar as variáveis do tipo numérica: salarioInformado, aliquota1, aliquota2, aliquota3, aliquota4;
+
+	salarioInformado = Ler ();
+	aliquota1 = Ler (0.075);
+	aliquota2 = Ler (0.09);
+	aliquota3 = Ler (0.12);
+	aliquota4 = Ler (0.14);
+
+	SE
+	    (salarioInformado <= 1045,00);
+	    Exibir: “Seu valor do INSS é de:” + (salarioInformado * alíquota1);	FIM SE
+
+	SE
+	    (salarioInformado >= 1045,01 && salarioInformado <= 2089,60);
+	    Exibir: “Seu valor do INSS é de:” + (salarioInformado * alíquota2);	FIM SE
+	SE
+	    (salarioInformado >= 2.089,61 && salarioInformado <= 3.134,40);
+	    Exibir: “Seu valor do INSS é de:” + (salarioInformado * alíquota3);	FIM SE
+
+ 	SE NÃO
+	    (salarioInformado >= 3.134,41 && salarioInformado <= 6.101,06);
+	    Exibir: “Seu valor do INSS é de:” + (salarioInformado * alíquota4);	FIM SE
+
+
+Fim Algoritmo
+
+===============
+
+Exercício 8 -  Faça um algoritmo para ler um valor de salário, calcular e exibir o valor do salário bruto, valor do salário líquido e o valor do imposto de renda. Respeitando a tabela abaixo: 
+Base de cálculo	Alíquota	Dedução
+de 0,00 até 1.903,98	isento	0
+de 1.903,99 até 2.826,65	7,50%	142,8
+de 2.826,66 até 3.751,05	15,00%	354,8
+de 3.751,06 até 4.664,68	22,50%	636,13
+a partir de 4.664,68	27,50%	869,36
+19
+		Inicio Algoritmo
+		
+		Declarar as variáveis do tipo numérica: salarioInformado, deducao1, deducao2, deducao3, deducao4, aliquota1, aliquota2, aliquota3, aliquota4;
+		
+		salarioInformado = Ler ();
+
+		deducao1 = Ler (142,80);
+		deducao2 = Ler (354,80);
+		deducao3 = Ler (636,13);
+		deducao4 = Ler (869,36);
+
+		aliquota1 = (salarioInformado * 0,075)
+		aliquota2 = (salarioInformado * 0,15)
+		aliquota3 = (salarioInformado * 0,225)
+		aliquota4 = (salarioInformado * 0,275)
+
+		SE(salarioInformado >= 0,00 && salarioInformado <= 1903,98);
+		     Exibir: “Seu salario BRUTO é de:” + (salarioInformado);	
+		     Exibir: “Seu salario LIQUIDO é de:” + (salarioInformado);
+		     Exibir: “Você e isento de tributos”;
+	             FIM SE
+
+		SE (salarioInformado >= 1.903,99 && salarioInformado <= 2.826,65);
+		     Exibir: “Seu salario BRUTO é de:” + (salarioInformado);	
+		     Exibir: “Seu salario LIQUIDO é de:” + (salarioInformado – aliquota1) – deducao1;
+		     Exibir: “Seu IMPOSTO é de:” + (salarioInformado * 0,075) – deducao1;
+		FIM SE
+
+		SE (salarioInformado >= 2.826,66 && salarioInformado <= 3.751,05);
+		     Exibir: “Seu salario BRUTO é de:” + (salarioInformado);	
+		     Exibir: “Seu salario LIQUIDO é de:” + (salarioInformado – aliquota2) – deducao2;
+		     Exibir: “Seu IMPOSTO é de:” + (salarioInformado * 0,15) – deducao2;
+		FIM SE
+
+		SE (salarioInformado >= 3.751,06 && salarioInformado <= 4.664,68);
+		     Exibir: “Seu salario BRUTO é de:” + (salarioInformado);	
+		     Exibir: “Seu salario LIQUIDO é de:” + (salarioInformado – aliquota3) – deducao3 ;
+		     Exibir: “Seu IMPOSTO é de:” + (salarioInformado * 0,225) – deducao3;
+		FIM SE
+		
+		SE (salarioInformado >= 4.664,69);
+		     Exibir: “Seu salario BRUTO é de:” + (salarioInformado);	
+		     Exibir: “Seu salario LIQUIDO é de:” + (salarioInformado – aliquota4) – deducao4;
+		     Exibir: “Seu IMPOSTO é de:” + (salarioInformado * 0,275) – deducao4;
+		FIM SE
+
+
+		Fim Algoritmo
+
+==============
+
+9-)Faça um algoritmo para ler um número inteiro entre: 1 a 10, calcular e exibir a tabuada deste número digitado. Ex.: 10 x 1 = 10, .., 10 x 10 = 100.
+
+ ENQUANTO(Condição) -> Repete uma instrução enquanto a condição for verdadeira. 
+
+Início Algoritmo 
+
+	Declarar variáveis do tipo inteiro: numeroDigitado, i=1, resultado; 
+	numeroDigitado  = Ler(“10”); 
+	
+	Enquanto(i<=10)
+        resultado = numeroDigitado * i; 
+		Exibir: numeroDigitado + “ X ” + i  + “ = ” + resultado; 
+		i = i+1; //soma do i +1 pra entrar em loop infinito
+	Fim Enquanto
+	
+Fim Algoritmo 
+
+===============
+
+10-)Faça um algoritmo para ler um valor de investimento, com uma taxa de juros de 5% a.a. Ao final de 10 anos, exibir o valor investido, valor dos juros e o total com juros. Considerando que a remuneração será no regime de juros simples.
+
+Sem utilizar o enquanto: 
+
+Inicio Algoritmo 
+
+Declarar variáveis numérico: valorJuros, taxaJuros = 0.05, valorInvestimento, valorTotal; 
+Declarar variável inteiro: ano = 1;  
+valorInvestimento  = Ler (“1.000,00”); 
+valorJuros = (10 * taxaJuros)* valorInvestimento; //500,00; 
+valorTotal = (valorJuros*valorInvestimento)+ valorInvestimento ;
+
+Exibir: “Valor Investido: R$ ”+ valorInvestimento; 
+Exibir: “Valor Juros: R$ ”+ valorJuros; 
+Exibir: “Valor Total com Juros: R$ ”+ valorTotal; 
+
+
+Fim Algoritmo 
+
+
+Utilizando o enquanto: 
+
+Inicio Algoritmo 
+
+    Declarar variáveis numérico: valorJuros, taxaJuros = 0.05, valorInvestimento, valorTotal; 
+    Declarar variável inteiro: ano = 1;  
+    valorInvestimento  = Ler (“1.000,00”); 
+        
+    Enquanto(ano<= 10)
+
+        valorJuros = valorJuros+( valorInvestimento * taxaJuros);
+        ano = ano+1; //ano++
+            
+    Fim Enquanto
+        
+    valorTotal = valorJuros + valorInvestimento; 
+
+    Exibir: “Valor Investido: R$ ”+ valorInvestimento; 
+    Exibir: “Valor Juros: R$ ”+ valorJuros; 
+    Exibir: “Valor Total com Juros: R$ ”+ valorTotal; 
+
+
+Fim Algoritmo 
+
+==================
+
+11-) Faça um algoritmo para ler um número inteiro, somar 2 ao número digitado, até completar 100 iterações. Por ex.: Digitou 10. 10+2, 12+2, 14+2, Até completar 100 iterações. 
+
+Inicio Algoritmo
+
+    Declarar variáveis do tipo inteiro: numeroDigitado, i = 1; 
+    numeroDigitado  = Ler(“10”); 
+
+    Enquanto (i<=100)
+        numeroDigitado  = numeroDigitado  + 2; 
+        Exibir: “O Total somado é: ”+ numeroDigitado  
+    i++; 
+
+    FIM Enquanto
+
+
+Fim Algoritmo 
+
+================
+
+EXERCICIO NIVEL MEDIO
+
+1- Faça um algoritmo para verificar e exibir de 0 a 100, quais são os números Pares e ímpares.
+
+Inicio Algoritmo
+
+    Declarar variavel do tipo inteiro = i = 0;
+    
+    ENQUANTO (i<=100)
+
+        SE (i % 2) == 0
+            Exibir = "Ëste número é par: " + i;
+        FIM SE;
+
+        SE (i % 2) != 0
+            Exibir = "Este número é impar: " + i;
+        FIM SE;
+      
+      (Podia ser feito assim tbm a validação do IMPAR)
+      //SE NAO  
+      //Exibir = "Este número é impar: " + i;
+      //FIM SE;
+
+    i++;
+
+    FIM ENQUANTO;
+
+Fim Algoritmo;
+
+=================
+
+2- Faça um algoritmo para ler um valor de investimento, com uma taxa de juros de 5% a.a. 
+Ao final de 10 anos, exibir o valor investido, valor dos juros, e o total. 
+Considerando que a remuneração será no regime de juros compostos.
+
+Inicio Algoritmo
+
+    Declarar variavel do tipo numerico: valorInvestido, taxaJuros = 0.05, totalAtualizadoComJuros, valorTotal;
+    Declarar variavel do tipo inteiro: ano = 1;
+
+    valorInvestido = Ler ("1000,00");
+
+    totalAtualizadoComJuros = valorInvestido
+    
+    ENQUANTO (ano <= 10)
+        totalAtualizadoComJuros = (totalAtualizadoComJuros * taxaJuros) + totalAtualizadoComJuros;
+
+    ano++;
+
+    FIM ENQUANTO
+
+        Exibir = "O valor investido foi de R$ " + valorInvestido;
+        Exibir = "O valor dos juros é de R$ " + (totalAtualizadoComJuros - valorInvestido);
+        Exibir = "O valor total é de R$ " + totalAtualizadoComJuros;
+
+Fim Algoritmo
+
+=================
+
+3- Faça um algoritmo para calcular e exibir a soma de todos os números de 0 a 1000.
+E parar se caso a soma atingir 1500(ou mais).
+
+Inicio Algoritmo
+
+    Declarar variavel do tipo numerico: soma;
+    Declarar variavel do tipo inteiro: i=0;
+    
+    ENQUANTO (i <= 1000)
+    soma = soma + 1;
+    Exibir: "O resultado da soma de todos os números é: " + soma;
+    
+        SE (soma => 1500)
+            Break; // Finaliza o enquanto
+        FIM SE;
+    
+    i++;
+
+    FIM ENQUANTO
+
+Fim Algoritmo
+
+===================
+
+4- Faça um algoritmo para calcular e exibir a multiplicação de todos os números de 1 a 1000.
+E toda vez que resultado chegar ou ultrapassar 1000, faça que o resultado das multiplicações volte a ser 1.
+
+Inicio Algoritmo
+
+    Declarar variavel do tipo numerico: resultado = 1;
+    Declarar variavel do tipo inteiro: i=0;
+    
+    ENQUANTO (i <= 1000)
+    resultado = resultado * i;
+    Exibir: "O resultado da multiplicação dos números é: " + resultado;
+    
+        SE (resultado >= 1000)
+           resultado = (resultado/resultado);
+        FIM SE;
+    
+    i++;
+
+    FIM ENQUANTO
+
+Fim Algoritmo
+
+====================
+
+5- Faça um algoritmo para ler 5 números, verificar e exibir, quais dos 5 números digitados, é o menor.  
+
+Inicio Algoritmo
+
+	Declarar variavel do tipo inteiro: numeroDigitado, menorNumero, i = 1; 
+
+		Enquanto(i <= 5);
+			numeroDigitado = Ler("numeroDigitado");
+
+				SE (numeroDigitado < menorNumero || i==1) ;OU: Se estiver na primeira interacao, vai atribuir ao menor numero o que foi digitado.
+					menorNumero = numeroDigitado;
+				Fim SE	
+		i++;
+		Fim Enquanto
+	Exibir = ("O numero: " + menorNumero + "é o menor");
+
+Fim Algoritmo
+
+====================
+
+6- Faça um algoritmo para ler um número inteiro, calcular e exibir o 
+Fatorial do número digitado. Ex.: Digitou 10. 10*(10-1)*(10-2)*(10-3).. *(10-1) = 
+3.628.800
+
+Inicio Algoritmo
+
+	Declarar variavel do tipo inteiro: numeroInserido, i=10, multiplicador, fatorial;
+
+	numeroInserido = Ler(10);
+
+		Enquanto (i >= 1)
+			multiplicador = i;
+			fatorial = numeroInserido * (multiplicador - 1);
+			numeroInserido = fatorial;
+		i--;
+		Fim Enquanto
+
+	Exibir = "O Resultado do Fatorial é: " + numeroInserido;
+
+Fim Algoritmo
+
+=====================
+=====================
+
+7- Faça um algoritmo para ler todos os meses do ano, armazene em um vetor.
+
+Inicio Algoritmo ; SEM ENQUANTO
+
+	Declarar vetor do tipo texto: vetor[12];
+	
+	vetor[0] = "Janeiro";
+	vetor[1] = "Fevereiro";
+	vetor[2] = "Março";
+	vetor[3] = "Abril";
+	vetor[4] = "Maio";
+	vetor[5] = "Junho";
+	vetor[6] = "Julho";
+	vetor[7] = "Agosto";
+	vetor[8] = "Setembro";
+	vetor[9] = "Outubro";
+	vetor[10] = "Novembro";
+	vetor[11] = "Dezembro";
+
+Fim Algoritmo
+
+Inicio Algoritmo ; COM ENQUANTO
+
+	Declarar vetor do tipo texto: vetor[12];
+	Declarar variavel do tipo inteira: i = 0;
+	
+	ENQUANTO (i<12)
+		vetor[i] = "Janeiro";
+
+	FIM ENQUANTO 
+
+
+Fim Algoritmo
+
+=====================
+
+8 - Faça um algoritmo para exibir todos os meses digitados anteriormente.
+
+Inicio Algoritmo
+
+	Declarar vetor do tipo texto: vetorMeses[12];
+	Declarar variavel do tipo inteira: i = 0;
+	
+	vetorMeses[0] = "Janeiro";
+	vetorMeses[1] = "Fevereiro";
+	vetorMeses[2] = "Março";
+	vetorMeses[3] = "Abril";
+	vetorMeses[4] = "Maio";
+	vetorMeses[5] = "Junho";
+	vetorMeses[6] = "Julho";
+	vetorMeses[7] = "Agosto";
+	vetorMeses[8] = "Setembro";
+	vetorMeses[9] = "Outubro";
+	vetorMeses[10] = "Novembro";
+	vetorMeses[11] = "Dezembro";
+
+		ENQUANTO (i < 12)
+			Exibir: "Esse é o mes de:" +i + "i" + vetorMeses[i];
+
+		i++;
+
+		FIM ENQUANTO;
+
+Fim Algoritmo
+
+=====================
+
+9- Faça um algoritmo para: 
+Criar dois vetores.
+Em um vetor:  ler e armazenar o nomes de alunos. 
+No outro vetor: ler e armazenar a numeração de cada aluno, de acordo com a ordem inserida no vetor de nomes. 
+E exiba, o Nome e o número correspondente de cada um.
+
+Inicio Algoritmo
+
+	Declarar vetor do tipo texto: vetorAlunos[5];
+	Declarar vetor do tipo numerico: vetorNumero[5];
+	Declarar variavel do tipo inteiro: i=0;
+
+	vetorAlunos[0] = "Ronaldo";
+	vetorAlunos[1] = "Neymar";
+	vetorAlunos[2] = "Messi";
+	vetorAlunos[3] = "Lewandosvisk";
+	vetorAlunos[4] = "Mbappe";
+
+	vetorNumero[0] = "1";
+	vetorNumero[1] = "2";
+	vetorNumero[2] = "3";
+	vetorNumero[3] = "4";
+	vetorNumero[4] = "5";
+
+	vetorNumero[i] = i; ;PODE SER ASSIM TAMBEM
+
+		ENQUANTO (i < 6)
+			Exibir: vetorNumero[i] +"-"+ vetorAlunos[i];
+
+		i++
+
+		FIM ENQUANTO
+
+Fim Algoritmo
+
+
+Inicio Algoritmo ; TAMBEM PODE SER FEITO ASSIM
+
+	Declarar vetor do tipo texto: vetorAlunos[5];
+	Declarar vetor do tipo numerico: vetorNumero[5];
+	Declarar variavel do tipo inteiro: i=0;
+
+
+		ENQUANTO (i<6)
+			vetorAlunos[i] = Ler ("Nome Digitado");
+			vetorNumero[i] = Let ("Numero do aluno digitado");
+			i++;
+		FIM ENQUANTO
+
+		i = 0;
+		ENQUANTO (i<6)
+			Exibir: "Nome do Aluno: " +vetorAlunos[i] + " - " + "Numero do aluno: " +vetorNumero[i];
+			i++
+		FIM ENQUANTO
+
+Fim Algoritmo
+
+======================
+
+10 - Faca um algoritmo que :
+- Calcule e exiba a sequencia de Fibonaci ate o 10 elemento.
+EX.: 0,1,1... 3,4. Usando vetor, para armazenar o resultado.
+A sequencia de Fibonacci, é calculada com a soma dos 2 termos anteriores, sendo o primeiro e o segundo, 0 e 1, respectivamente.
+
+Inicio Algoritmo
+
+	Declarar vetor do tipo numero: fibonacci[10];
+	Declarar variavel do tipo inteiro: i=2, elemento; Se utilizar i = 0 da BUG, porque o resultado fica -1 no ENQUANTO.
+
+	fibonacci[0] = 0;
+	fibonacci[1] = 1;
+
+	;Qual elemento da Fibonacci, o usuario quer descobrir ?
+	elemento = Ler ("10");
+
+		ENQUANTO (i < elemento)
+			fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+			
+		i++;
+		FIM ENQUANTO
+
+	Exibir: "O decimo termo de Fibonacci é:" + fibonacci[i-2];
+
+	;Para mostrar TODOS os resultados Fibonacci até a 10 elemento.
+	i = 0
+		ENQUANTO (i < elemento)
+			Exibir: fibonacci[i];
+			i++;
+		FIM ENQUANTO
+
+Fim Algoritmo
+
+====================
