@@ -2,6 +2,8 @@ package easy;
 
 import javax.swing.JOptionPane;
 
+import utils.Utils;
+
 public class Execucao {
 
     public static void main(String[] args) { // execucao dos metodos
@@ -23,7 +25,7 @@ public class Execucao {
         }
         if (selecionaExercicio == 4) { // metodo exercicio 04
             String numeroDigitadoUsuarioStg = JOptionPane.showInputDialog("Digite um numero: ");
-            int numeroDigitado = Integer.parseInt(numeroDigitadoUsuarioStg);
+            int numeroDigitado = Utils.converteStringInteiro(numeroDigitadoUsuarioStg);
             Exercicio_04_easy objexercicio04 = new Exercicio_04_easy();
             System.out.println(objexercicio04.multiplicacaoVariavelArmazenada(numeroDigitado));
         }
@@ -31,9 +33,9 @@ public class Execucao {
             String primeiroNumeroStg = JOptionPane.showInputDialog("Digite o primeiro numero: ");
             String segundoNumeroStg = JOptionPane.showInputDialog("Digite o segundo numero: ");
             String terceiroNumeroStg = JOptionPane.showInputDialog("Digite o terceiro numero: ");
-            int primeiroNumero = Integer.parseInt(primeiroNumeroStg);
-            int segundoNumero = Integer.parseInt(segundoNumeroStg);
-            int terceiroNumero = Integer.parseInt(terceiroNumeroStg);
+            int primeiroNumero = Utils.converteStringInteiro(primeiroNumeroStg);
+            int segundoNumero = Utils.converteStringInteiro(segundoNumeroStg);
+            int terceiroNumero = Utils.converteStringInteiro(terceiroNumeroStg);
             Exercicio_05_easy objexercicio05 = new Exercicio_05_easy();
             System.out.println(objexercicio05.operacoesMatematicas(primeiroNumero, segundoNumero, terceiroNumero));
         }
