@@ -1,7 +1,5 @@
 package easy;
-
 import javax.swing.JOptionPane;
-
 import utils.Utils;
 
 public class Execucao {
@@ -38,6 +36,20 @@ public class Execucao {
             int terceiroNumero = Utils.converteStringInteiro(terceiroNumeroStg);
             Exercicio_05_easy objexercicio05 = new Exercicio_05_easy();
             System.out.println(objexercicio05.operacoesMatematicas(primeiroNumero, segundoNumero, terceiroNumero));
+        }
+        if (selecionaExercicio == 6) { // metodo exercicio 06
+            String primeiraNotaStg = JOptionPane.showInputDialog("Digite a primeira nota: ");
+            String segundaNotaStg = JOptionPane.showInputDialog("Digite a segunda nota: ");
+            double nota1 = Utils.converteStringDouble(primeiraNotaStg);
+            double nota2 = Utils.converteStringDouble(segundaNotaStg);
+            Exercicio_06_easy objexercicio06 = new Exercicio_06_easy();
+            System.out.println(objexercicio06.calculaRecebeNotaCalculaMedia(nota1, nota2));
+        }
+        if (selecionaExercicio == 7) { // metodo exercicio 07
+            String salarioInformadoStg = JOptionPane.showInputDialog("Digite o salário ");
+            double salarioInformado = Utils.converteStringDouble(salarioInformadoStg);
+            Exercicio_07_easy objexercicio07 = new Exercicio_07_easy();
+            System.out.println(objexercicio07.calculoInss(salarioInformado));
         }
         else {
             System.out.println("Esse exercicio ainda não existe");
