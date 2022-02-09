@@ -1,5 +1,8 @@
 package easy;
+import java.text.DecimalFormat;
+
 import javax.swing.JOptionPane;
+
 import utils.Utils;
 
 public class Execucao {
@@ -51,9 +54,41 @@ public class Execucao {
             Exercicio_07_easy objexercicio07 = new Exercicio_07_easy();
             System.out.println(objexercicio07.calculoInss(salarioInformado));
         }
+        if (selecionaExercicio == 8) { // metodo exercicio 08
+            String salarioStg = JOptionPane.showInputDialog("Digite o salario: ");
+            double salario = Utils.converteStringDouble(salarioStg);
+            DecimalFormat df = new DecimalFormat("#,###.00");
+            
+            Exercicio_08_easy objexercicio08 = new Exercicio_08_easy();
+            System.out.println("O imposto de renda sera: R$ " + df.format(objexercicio08.calculaImpostoDeRenda(salario)));
+            double impostoDeRenda = objexercicio08.calculaImpostoDeRenda(salario);
+            System.out.println("O salario liquido sera: R$ " + df.format(objexercicio08.calculaSalarioLiquido(salario, impostoDeRenda)));
+        }
+        if (selecionaExercicio == 9) { // metodo exercicio 09
+            String numeroDigitadoStg = JOptionPane.showInputDialog("Digite um numero entre 1 e 10:");
+            int numeroDigitado = Utils.converteStringInteiro(numeroDigitadoStg);
+            Exercicio_09_easy objexercicio09 = new Exercicio_09_easy();
+            objexercicio09.calculoTaboada(numeroDigitado);
+        }
+        if (selecionaExercicio == 10) { // metodo exercicio 10
+            String valorInvestimentoStg = JOptionPane.showInputDialog("Digite o valor investido: ");
+            double valorInvestimento = Utils.converteStringDouble(valorInvestimentoStg);
+            DecimalFormat df = new DecimalFormat("#,###.##");
+
+            Exercicio_10_easy objexercicio10 = new Exercicio_10_easy();
+            double valorJuros = objexercicio10.calculaJuros(valorInvestimento);
+            String valorTotal = df.format(objexercicio10.totalComJuros(valorJuros, valorInvestimento));
+            System.out.println("Valor investido: R$" + valorInvestimento + "\n" + "Valor juros: " + df.format(valorJuros));
+            System.out.println("Valor total com juros: R$" + valorTotal);
+        }
+        if (selecionaExercicio == 11) { // metodo exercicio 11
+            String numeroDigitadoStg = JOptionPane.showInputDialog("Digite um número inteiro: ");
+            int numeroDigitado = Utils.converteStringInteiro(numeroDigitadoStg);
+            Exercicio_11_easy objexercicio11 = new Exercicio_11_easy();
+            System.out.println("O total somado é: " + objexercicio11.somaAlgoritmo(numeroDigitado));
+        }
         else {
             System.out.println("Esse exercicio ainda não existe");
         }
     }
-
 }

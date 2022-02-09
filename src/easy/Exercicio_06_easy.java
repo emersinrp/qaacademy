@@ -20,7 +20,6 @@ public class Exercicio_06_easy {
             }
             return null;            
         }
-
 }
 
 //         CODIGO ANTES DA REFATORAÇÃO:
