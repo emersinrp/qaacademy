@@ -2,9 +2,8 @@ package medium;
 
 public class Exercicio_08_medio {
     
-    public static void main(String[] args) {
+    public String[] criaVetorMeses() {
         
-        int i = 0;
         String[] vetorMeses;
         vetorMeses = new String[12];
 
@@ -21,9 +20,14 @@ public class Exercicio_08_medio {
         vetorMeses[10] = "Novembro";
         vetorMeses[11] = "Dezembro";
 
+        return vetorMeses;
+    }
+
+    public void imprimeValoresVetor(String[] vetorMeses) {
+        int i = 0;
         while (i < 12) {
-            System.out.println("Esse é o mes de: " + (i+1) + " - "+ vetorMeses[i]);
-            
+            System.out.println("Esse é o mes de: " 
+            + (i+1) + " - "+ vetorMeses[i]);
             i++;
         }
     }

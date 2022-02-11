@@ -1,7 +1,5 @@
 package easy;
 
-import utils.Utils;
-
 //  Exercício 7 -  Faça um algoritmo para ler um valor de salário, calcular e exibir o valor do INSS a ser pago. Respeitando a tabela abaixo: 
 // 	Salário de Contribuição (R$) Alíquota
 // 	Até R$ 1.045,00	7,50%

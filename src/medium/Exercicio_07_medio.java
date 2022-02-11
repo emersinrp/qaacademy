@@ -1,5 +1,7 @@
 package medium;
 
+// 7- Faça um algoritmo para ler todos os meses do ano, armazene em um vetor.
+
 public class Exercicio_07_medio {
 
     public static void main(String[] args) {
@@ -23,4 +25,3 @@ public class Exercicio_07_medio {
     }
 }
 
-// 7- Faça um algoritmo para ler todos os meses do ano, armazene em um vetor.

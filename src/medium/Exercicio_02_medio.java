@@ -6,20 +6,21 @@ package medium;
 
 public class Exercicio_02_medio {
     
-    public double resultadoInvestimento(double valorInvestido){
+    public double calculaInvestimentoJurosCompostos(double valorInvestimento){
+        
         double taxaJuros = 0.05, totalAtualizadoComJuros = 0;
-        int ano = 1;
+        int ano = 1, tempoInvestido = 10;
 
-        totalAtualizadoComJuros = valorInvestido;
+        totalAtualizadoComJuros = valorInvestimento;
 
-        while (ano <= 10) {
+        while (ano <= tempoInvestido) {
             totalAtualizadoComJuros = (totalAtualizadoComJuros * taxaJuros) + totalAtualizadoComJuros; // Regime juros compostos
             ano ++;
         }
-        System.out.println("O valor investido foi de: R$ "+ valorInvestido);
-        System.out.println("O valor dos juros é de: R$ " + (totalAtualizadoComJuros - valorInvestido));
-        System.out.println("O valor total é de: R$ "+ totalAtualizadoComJuros);
-        return valorInvestido;
+        return totalAtualizadoComJuros - valorInvestimento;
+    }
+    public double calculaValorTotalInvestimento(double valorInvestimento, double valorJuros){
+        return valorInvestimento + valorJuros;
     }
 }
 
@@ -44,6 +45,6 @@ public class Exercicio_02_medio {
     //     }
 
     //     System.out.println("O valor investido foi de: R$ "+ df.format(valorInvestido));
-    //     System.out.println("O valor dos juros é de: R$ " + df.format(totalAtualizadoComJuros - valorInvestido));
+    //     System.out.println("O valor dos juros é de: R$ " + df.format(totalAtualizadoComJuros - valorInvestimento));
     //     System.out.println("O valor total é de: R$ "+ df.format(totalAtualizadoComJuros));
     // }

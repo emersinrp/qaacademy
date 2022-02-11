@@ -2,25 +2,31 @@ package medium;
 
 import javax.swing.JOptionPane;
 
+// 5- Faça um algoritmo para ler 5 números, verificar e exibir, quais dos 5 números digitados, é o menor.
+
 public class Exercicio_05_medio {
 
-    public static void main(String[] args) {
+    public int verificaMenorNumero() {
 
-        int numeroDigitado, menorNumero = 0, i = 1, qtdDigitos = 1;
+        int menorNumero = 0, i = 1, numeroDigitado;
 
-        while (i <= 5 && qtdDigitos <= 5) {
-            String numeroDigitadoStg = JOptionPane.showInputDialog("Digite o " + qtdDigitos + " número :");
-            numeroDigitado = Integer.parseInt(numeroDigitadoStg);
+        while (i <= 5) {
+
+            numeroDigitado = lerNumeroDigitado();
 
             if (numeroDigitado < menorNumero || i == 1) {
                 menorNumero = numeroDigitado;
-
             }
             i++;
-            qtdDigitos++;
         }
-        System.out.println("O: " + menorNumero + " é o MENOR número entre os digitados.");
+        return menorNumero;
+    }
+
+    private int lerNumeroDigitado() {
+
+        String numeroDigitadoStg = JOptionPane.showInputDialog("Digite o número :");
+        int numeroDigitado = Integer.parseInt(numeroDigitadoStg);
+
+        return numeroDigitado;
     }
 }
-
-// 5- Faça um algoritmo para ler 5 números, verificar e exibir, quais dos 5 números digitados, é o menor.  
